@@ -1,0 +1,12 @@
+<div>
+    <h2>Product Details</h2>
+    <div>
+      <p><strong>Product Name:</strong>{{ product.name }}</p>
+      <p><strong>Product Description:</strong>{{ product.description }}</p>
+      <p><strong>Product Price:</strong> ${{ product.price }}</p>
+    </div>
+    <div>
+      <a [routerLink]="['/products']" class="btn back-button">Back to List</a>
+    </div>
+  </div>
+  

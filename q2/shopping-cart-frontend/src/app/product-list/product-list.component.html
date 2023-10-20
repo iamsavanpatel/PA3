@@ -1,0 +1,17 @@
+<div class="product-list">
+    <h2>Product List</h2>
+    <a [routerLink]="['/products/add']">Add product</a>
+    <div class="product-grid">
+      <div class="product-item" *ngFor="let product of products">
+        <div class="product-details">
+          <p><strong>Name:</strong>{{ product.name }}</p>
+          <p><strong>Description:</strong>{{ product.description }}</p>
+          <p><strong>Price:</strong> {{ product.price }}</p>
+        
+          <a [routerLink]="['/products/edit', product._id]" style="margin-left: 5px;margin-right: 5px;"> <button>Edit </button> </a>      
+          <a [routerLink]="['/products', product._id]" style="margin-left: 5px;margin-right: 5px;"><button>View </button></a>
+          <button (click)="deleteProduct(product._id)"  style="margin-left: 5px;margin-right: 5px;">Delete</button>
+      </div>
+    </div>
+  </div>
+  
